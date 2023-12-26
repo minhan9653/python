@@ -12,3 +12,4 @@ missing_numbers = list(set(range(1, 11)) - submitted_numbers)
 missing_numbers.sort()
 print(missing_numbers[0])  # 가장 작은 출석번호
 print(missing_numbers[1])  # 그 다음 출석번호
+
