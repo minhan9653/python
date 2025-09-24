@@ -1,0 +1,163 @@
+
+using System;
+using System.Windows.Forms;
+
+namespace NoticeEditor_wpf
+{
+    partial class NoticeListForm
+    {
+        private System.ComponentModel.IContainer components = null;
+        private System.Windows.Forms.DataGridView dgvNotices;
+        private System.Windows.Forms.Button btnInsert;
+        private System.Windows.Forms.Button btnDelete;
+        private System.Windows.Forms.Button btnRefresh;
+        private System.Windows.Forms.FlowLayoutPanel flpPages;
+
+        private System.Windows.Forms.DataGridViewCheckBoxColumn chkDelete;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colNoticeId;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colTitle;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colCreatedDate;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colEndDate;
+
+        protected override void Dispose(bool disposing)
+        {
+            if (disposing && (components != null))
+            {
+                components.Dispose();
+            }
+            base.Dispose(disposing);
+        }
+
+        private void InitializeComponent()
+        {
+            this.dgvNotices = new System.Windows.Forms.DataGridView();
+            this.chkDelete = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.colNoticeId = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colTitle = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colCreatedDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colEndDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnInsert = new System.Windows.Forms.Button();
+            this.btnDelete = new System.Windows.Forms.Button();
+            this.btnRefresh = new System.Windows.Forms.Button();
+            this.flpPages = new System.Windows.Forms.FlowLayoutPanel();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvNotices)).BeginInit();
+            this.SuspendLayout();
+            // 
+            // dgvNotices
+            // 
+            this.dgvNotices.AllowUserToAddRows = false;
+            this.dgvNotices.AllowUserToDeleteRows = false;
+            this.dgvNotices.AutoGenerateColumns = false;
+            this.dgvNotices.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvNotices.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.chkDelete,
+            this.colNoticeId,
+            this.colTitle,
+            this.colCreatedDate,
+            this.colEndDate});
+            this.dgvNotices.Location = new System.Drawing.Point(12, 12);
+            this.dgvNotices.Name = "dgvNotices";
+            this.dgvNotices.RowTemplate.Height = 23;
+            this.dgvNotices.Size = new System.Drawing.Size(760, 380);
+            this.dgvNotices.TabIndex = 0;
+            // 
+            // chkDelete
+            // 
+            this.chkDelete.HeaderText = "삭제";
+            this.chkDelete.Name = "chkDelete";
+            this.chkDelete.Width = 50;
+            // 
+            // colNoticeId
+            // 
+            this.colNoticeId.DataPropertyName = "NoticeId";
+            this.colNoticeId.HeaderText = "ID";
+            this.colNoticeId.Name = "colNoticeId";
+            this.colNoticeId.Visible = false;
+            // 
+            // colTitle
+            // 
+            this.colTitle.DataPropertyName = "Title";
+            this.colTitle.HeaderText = "제목";
+            this.colTitle.Name = "colTitle";
+            this.colTitle.Width = 300;
+            // 
+            // colCreatedDate
+            // 
+            this.colCreatedDate.DataPropertyName = "CreatedDate";
+            this.colCreatedDate.HeaderText = "적용일";
+            this.colCreatedDate.Name = "colCreatedDate";
+            this.colCreatedDate.Width = 150;
+            // 
+            // colEndDate
+            // 
+            this.colEndDate.DataPropertyName = "EndDate";
+            this.colEndDate.HeaderText = "종료일";
+            this.colEndDate.Name = "colEndDate";
+            this.colEndDate.Width = 150;
+            this.colEndDate.DefaultCellStyle.Format = "yyyy-MM-dd tt h:mm";
+            // 
+            // btnInsert
+            // 
+            this.btnInsert.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnInsert.Location = new System.Drawing.Point(500, 410);
+            this.btnInsert.Name = "btnInsert";
+            this.btnInsert.Size = new System.Drawing.Size(75, 30);
+            this.btnInsert.TabIndex = 1;
+            this.btnInsert.Text = "추가";
+            this.btnInsert.UseVisualStyleBackColor = true;
+            this.btnInsert.Click += new System.EventHandler(this.btnInsert_Click);
+            // 
+            // btnDelete
+            // 
+            this.btnDelete.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnDelete.Location = new System.Drawing.Point(580, 410);
+            this.btnDelete.Name = "btnDelete";
+            this.btnDelete.Size = new System.Drawing.Size(75, 30);
+            this.btnDelete.TabIndex = 2;
+            this.btnDelete.Text = "삭제";
+            this.btnDelete.UseVisualStyleBackColor = true;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
+            // 
+            // btnRefresh
+            // 
+            this.btnRefresh.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnRefresh.Location = new System.Drawing.Point(660, 410);
+            this.btnRefresh.Name = "btnRefresh";
+            this.btnRefresh.Size = new System.Drawing.Size(90, 30);
+            this.btnRefresh.TabIndex = 3;
+            this.btnRefresh.Text = "새로고침";
+            this.btnRefresh.UseVisualStyleBackColor = true;
+            this.btnRefresh.Click += new System.EventHandler(this.btnRefresh_Click);
+            // 
+            // flpPages
+            // 
+            this.flpPages.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.flpPages.Location = new System.Drawing.Point(12, 400);
+            this.flpPages.Name = "flpPages";
+            this.flpPages.Size = new System.Drawing.Size(400, 40);
+            this.flpPages.TabIndex = 4;
+            // 
+            // NoticeListForm
+            // 
+            this.ClientSize = new System.Drawing.Size(784, 461);
+            this.Controls.Add(this.flpPages);
+            this.Controls.Add(this.btnRefresh);
+            this.Controls.Add(this.btnDelete);
+            this.Controls.Add(this.btnInsert);
+            this.Controls.Add(this.dgvNotices);
+            this.Name = "NoticeListForm";
+            this.Text = "공지 목록";
+            this.Load += new System.EventHandler(this.NoticeListForm_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvNotices)).EndInit();
+            this.ResumeLayout(false);
+
+
+            this.dgvNotices.RowPrePaint += dgvNotices_RowPrePaint;
+            this.dgvNotices.ColumnHeaderMouseClick += DgvNotices_ColumnHeaderMouseClick;
+            //this.dgvNotices.RowHeadersVisible = false;
+
+        }
+
+
+    }
+}
